@@ -12,10 +12,10 @@ const program = new Command();
 
 program
     .name("jslings")
-    .description("jslings can help YOU master Javascript on the terminal")
+    .description("jslings pode te ajudar a dominar JavaScript no terminal")
     .on("--help", () => {
         console.log("");
-        console.log("Examples:");
+        console.log("Exemplos:");
         console.log("");
         console.log("  $ jslings watch");
         console.log("  $ jslings clear");
@@ -24,13 +24,13 @@ program
 program
     .command("watch")
     .alias("w")
-    .description("jslings interactive code testing UI")
+    .description("Interface interativa de teste de código do jslings")
     .action(async () => {
         try {
             const { render } = await import("ink");
             render(React.createElement(Landing));
         } catch (error) {
-            console.error("Error rendering Landing component:", error);
+            console.error("Erro ao renderizar componente Landing:", error);
             process.exit(1);
         }
     });
@@ -38,16 +38,16 @@ program
 program
     .command("clear")
     .alias("r")
-    .description("Clears all your userdata to start fresh")
+    .description("Limpa todos os seus dados de usuário para começar do zero")
     .action(() => {
         try {
             const database = loadJSONDataFromFileIfPresentElseCreateFileAndLoad<
                 Exercise[]
             >(process.cwd(), "exercises.json");
             clearUserDataAndStartFresh(database);
-            console.log(chalk.greenBright("Reset successful"));
+            console.log(chalk.greenBright("Reset realizado com sucesso"));
         } catch (error) {
-            console.error("Error clearing user data:", error);
+            console.error("Erro ao limpar dados do usuário:", error);
             process.exit(1);
         }
     });

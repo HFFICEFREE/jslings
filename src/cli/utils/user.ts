@@ -40,12 +40,12 @@ const returnNextIncompleteExercise = (
             .map((exercise) => exercise.id)
             .indexOf(completedId);
         if (idxOfCompleted === -1) {
-            throw new Error("Invalid exercise selected");
+            throw new Error("Exercício inválido selecionado");
         }
         if (idxOfCompleted !== database.length - 1) {
             return database[idxOfCompleted + 1];
         }
-        throw new Error("Congratulations! You have completed jslings 🔥");
+        throw new Error("Parabéns! Você completou o jslings 🔥");
     }
     return database[0];
 };

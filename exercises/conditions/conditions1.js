@@ -1,18 +1,18 @@
 // conditions1.js
-// Conditional statements allow us to control the flow of logic in our code.
-// We have a function that should give us the sound an animal makes
-// Make the function WOOF if the animal is a dog.
-// Make the function MEOW if the animal is a cat
+// Declarações condicionais nos permitem controlar o fluxo de lógica em nosso código.
+// Temos uma função que deve nos dar o som que um animal faz
+// Faça a função retornar WOOF se o animal for um cachorro.
+// Faça a função retornar MEOW se o animal for um gato
 
-// Press the key 'h' for hints!
+// Pressione a tecla 'h' para dicas!
 
-// DO NOT EDIT ABOVE THIS LINE
+// NÃO EDITE ACIMA DESTA LINHA
 
 const animalSounds = (animal) => {
     return;
 };
 
-// DO NOT EDIT BELOW THIS LINE
+// NÃO EDITE ABAIXO DESTA LINHA
 module.exports = {
     animalSounds,
 };

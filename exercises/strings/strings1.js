@@ -1,14 +1,14 @@
 // strings1.js
-// JavaScript treats strings as objects, i.e strings have properties and methods.
-// Use the appropriate string method to give the uppercased version of the string
+// JavaScript trata strings como objetos, ou seja, strings têm propriedades e métodos.
+// Use o método de string apropriado para dar a versão em maiúsculas da string
 
-// Press the key 'h' for hints!
+// Pressione a tecla 'h' para dicas!
 
-// DO NOT EDIT ABOVE THIS LINE
+// NÃO EDITE ACIMA DESTA LINHA
 
 const uppercase = (text) => {
-    return;
+    return text.toUpperCase();
 };
 
-// DO NOT EDIT BELOW THIS LINE
+// NÃO EDITE ABAIXO DESTA LINHA
 module.exports = { uppercase };
