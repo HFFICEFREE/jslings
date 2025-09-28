@@ -1,16 +1,16 @@
 import { writeFileSync } from "fs";
-import produce from "immer";
-import nullthrows from "nullthrows";
+import { produce } from "immer";
+import { default as nullthrows } from "nullthrows";
 import path from "path";
-import { Exercise, Status } from "../../types/exercises.types";
-import { UserData } from "../../types/user.types";
+import { Exercise, Status } from "../../types/exercises.types.js";
+import { UserData } from "../../types/user.types.js";
 import {
     obtainStringifiedFileContents,
     jsonParsedFileContents,
     writeFileToPath,
     listFiles,
     isFilePresent,
-} from "../utils/fileSystem";
+} from "../utils/fileSystem.js";
 
 /**
  * Obtain the users progress

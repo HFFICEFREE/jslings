@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import Presentation from "./Presentation";
+import Presentation from "./Presentation.js";
 import {
     isFilePresent,
     loadJSONDataFromFileIfPresentElseCreateFileAndLoad,
-} from "../utils/fileSystem";
-import { Exercise, FileStatus } from "../../types/exercises.types";
-import { UserData } from "../../types/user.types";
-import { clearUserDataAndStartFresh } from "../utils/user";
+} from "../utils/fileSystem.js";
+import { Exercise, FileStatus } from "../../types/exercises.types.js";
+import { UserData } from "../../types/user.types.js";
+import { clearUserDataAndStartFresh } from "../utils/user.js";
 
 const Landing: React.FC = () => {
     try {

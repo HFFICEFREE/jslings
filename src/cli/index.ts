@@ -1,13 +1,12 @@
 #!/usr/bin/env node
 
 import React from "react";
-import { render } from "ink";
 import { Command } from "commander";
-import { clearUserDataAndStartFresh } from "../cli/utils/user";
-import Landing from "./components/landingUI";
-import { greenBright } from "chalk";
-import { loadJSONDataFromFileIfPresentElseCreateFileAndLoad } from "./utils/fileSystem";
-import { Exercise } from "../types/exercises.types";
+import { clearUserDataAndStartFresh } from "./utils/user.js";
+import Landing from "./components/landingUI.js";
+import chalk from "chalk";
+import { loadJSONDataFromFileIfPresentElseCreateFileAndLoad } from "./utils/fileSystem.js";
+import { Exercise } from "../types/exercises.types.js";
 
 const program = new Command();
 
@@ -27,7 +26,13 @@ program
     .alias("w")
     .description("jslings interactive code testing UI")
     .action(async () => {
-        render(React.createElement(Landing));
+        try {
+            const { render } = await import("ink");
+            render(React.createElement(Landing));
+        } catch (error) {
+            console.error("Error rendering Landing component:", error);
+            process.exit(1);
+        }
     });
 
 program
@@ -35,11 +40,16 @@ program
     .alias("r")
     .description("Clears all your userdata to start fresh")
     .action(() => {
-        const database = loadJSONDataFromFileIfPresentElseCreateFileAndLoad<
-            Exercise[]
-        >(process.cwd(), "exercises.json");
-        clearUserDataAndStartFresh(database);
-        console.log(greenBright("Reset successful"));
+        try {
+            const database = loadJSONDataFromFileIfPresentElseCreateFileAndLoad<
+                Exercise[]
+            >(process.cwd(), "exercises.json");
+            clearUserDataAndStartFresh(database);
+            console.log(chalk.greenBright("Reset successful"));
+        } catch (error) {
+            console.error("Error clearing user data:", error);
+            process.exit(1);
+        }
     });
 
 program.parse(process.argv);

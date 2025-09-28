@@ -1,14 +1,14 @@
 import React, { useEffect } from "react";
 import { Text, Box, useApp, useInput } from "ink";
-import { UserData } from "../../types/user.types";
-import { Exercise, Status } from "../../types/exercises.types";
-import { Command } from "../../types/cli.types";
-import { writeFileToPath } from "../utils/fileSystem";
-import { CodeEngine } from "../engine/code-engine";
-import { completeExercise } from "../utils/user";
+import { UserData } from "../../types/user.types.js";
+import { Exercise, Status } from "../../types/exercises.types.js";
+import { Command } from "../../types/cli.types.js";
+import { writeFileToPath } from "../utils/fileSystem.js";
+import { CodeEngine } from "../engine/code-engine.js";
+import { completeExercise } from "../utils/user.js";
 import chalk from "chalk";
 import * as path from "path";
-import produce from "immer";
+import { produce } from "immer";
 
 interface PresentationInterface {
     userdata: UserData;
@@ -96,8 +96,8 @@ const CurrentItem: React.FC<CurrentItemsInterface> = ({ userdata }) => {
                 Category :{" "}
                 {
                     userdata.current.info.testPath.split(path.sep)[
-                        userdata.current.info.testPath.split(path.sep).length -
-                            2
+                    userdata.current.info.testPath.split(path.sep).length -
+                    2
                     ]
                 }
             </Text>
@@ -192,13 +192,13 @@ const Presentation: React.FC<PresentationInterface> = ({
                             result === 1
                                 ? userdata
                                 : (completeExercise(
-                                      userdata,
-                                      userdata.current.id,
-                                      database,
-                                  ) as UserData);
+                                    userdata,
+                                    userdata.current.id,
+                                    database,
+                                ) as UserData);
 
                         setUserData({ ...newUserdata });
-                    } catch (err) {
+                    } catch (err: any) {
                         if (
                             err.message ===
                             "Congratulations! You have completed jslings 🔥"
@@ -246,7 +246,7 @@ const Presentation: React.FC<PresentationInterface> = ({
         ],
     ]);
 
-    useInput((input, _) => {
+    useInput((input: string, _: any) => {
         keyboardCommands.get(input)?.handler({ userdata, database });
     });
 

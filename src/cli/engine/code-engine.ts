@@ -1,8 +1,8 @@
 import { run } from "jest-cli";
 import childprocess from "child_process";
-import { CodeEngineInterface } from "../../types/code-engine.types";
-import { Exercise } from "../../types/exercises.types";
-import { UserData } from "../../types/user.types";
+import { CodeEngineInterface } from "../../types/code-engine.types.js";
+import { Exercise } from "../../types/exercises.types.js";
+import { UserData } from "../../types/user.types.js";
 
 export class CodeEngine implements CodeEngineInterface {
     userdata: UserData;

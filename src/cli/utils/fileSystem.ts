@@ -1,6 +1,6 @@
 import * as fs from "fs";
 import * as path from "path";
-import { FileStatus } from "../../types/exercises.types";
+import { FileStatus } from "../../types/exercises.types.js";
 
 /**
  * Returns status of file with name starting with `partialFileName` in `path`

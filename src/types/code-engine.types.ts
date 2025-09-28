@@ -1,5 +1,5 @@
-import { Exercise } from "./exercises.types";
-import { UserData } from "./user.types";
+import { Exercise } from "./exercises.types.js";
+import { UserData } from "./user.types.js";
 
 /**
  * This interface implements our testing engine

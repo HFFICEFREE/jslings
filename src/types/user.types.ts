@@ -1,4 +1,4 @@
-import { Exercise, Status } from "./exercises.types";
+import { Exercise, Status } from "./exercises.types.js";
 
 /**
  * Current Exercise Information
