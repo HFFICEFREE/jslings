@@ -1,12 +1,12 @@
 // variables1.js
 
-// Press the key 'h' for hints!
-// DO NOT EDIT ABOVE THIS LINE
+// Pressione a tecla 'h' para dicas!
+// NÃO EDITE ACIMA DESTA LINHA
 const constVariable = (a) => {
     return;
 };
 
-// DO NOT EDIT BELOW THIS LINE
+// NÃO EDITE ABAIXO DESTA LINHA
 
 module.exports = {
     constVariable,

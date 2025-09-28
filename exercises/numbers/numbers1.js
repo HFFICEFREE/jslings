@@ -1,16 +1,16 @@
 // numbers1.js
-// Doing math in JavaScript is very similar to doing math on paper!
-// Given two numbers, get their sum using the 'sum' function
+// Fazer matemática em JavaScript é muito similar a fazer matemática no papel!
+// Dados dois números, obtenha sua soma usando a função 'sum'
 
-// Press the key 'h' for hints!
+// Pressione a tecla 'h' para dicas!
 
-// DO NOT EDIT ABOVE THIS LINE
+// NÃO EDITE ACIMA DESTA LINHA
 
 const sum = (a, b) => {
     return;
 };
 
-// DO NOT EDIT BELOW THIS LINE
+// NÃO EDITE ABAIXO DESTA LINHA
 
 module.exports = {
     sum,

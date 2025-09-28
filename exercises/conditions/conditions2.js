@@ -1,18 +1,18 @@
 // conditions2.js
-// JavaScript allows us to write conditional statements in one line with the ternary operator.
-// Make the animalSound function ternary / one-line
-// Make the function WOOF if the animal is a dog.
-// Make the function MEOW if the animal is a cat.
+// JavaScript nos permite escrever declarações condicionais em uma linha com o operador ternário.
+// Faça a função animalSound usando ternário / uma linha
+// Faça a função retornar WOOF se o animal for um cachorro.
+// Faça a função retornar MEOW se o animal for um gato.
 
-// Press the key 'h' for hints!
+// Pressione a tecla 'h' para dicas!
 
-// DO NOT EDIT ABOVE THIS LINE
+// NÃO EDITE ACIMA DESTA LINHA
 
 const animalSoundsTernary = (animal) => {
     return;
 };
 
-// DO NOT EDIT BELOW THIS LINE
+// NÃO EDITE ABAIXO DESTA LINHA
 module.exports = {
     animalSoundsTernary,
 };

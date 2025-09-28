@@ -4,14 +4,16 @@
         "name": "strings1",
         "path": "./exercises/strings/strings1.js",
         "testPath": "../__tests__/strings/strings1.test.ts",
-        "hints": ["Which method can you use to convert the strings's case?"]
+        "hints": ["Qual método você pode usar para converter o caso da string?"]
     },
     {
         "id": "30a63b5d-8a43-4583-a026-790444efd3fc",
         "name": "strings2",
         "path": "./exercises/strings/strings1.js",
         "testPath": "../__tests__/strings/strings1.test.ts",
-        "hints": ["Which property can you use to find string length?"],
+        "hints": [
+            "Qual propriedade você pode usar para encontrar o comprimento da string?"
+        ],
         "currentHintIndex": 0,
         "status": "PENDING"
     },
@@ -21,8 +23,8 @@
         "path": "./exercises/numbers/numbers1.js",
         "testPath": "../__tests__/numbers/numbers1.test.ts",
         "hints": [
-            "How would you add two numbers in real life?",
-            "How could you complete the function using a plus sign?"
+            "Como você somaria dois números na vida real?",
+            "Como você poderia completar a função usando um sinal de mais?"
         ]
     },
     {
@@ -31,7 +33,7 @@
         "path": "./exercises/numbers/numbers2.js",
         "testPath": "../__tests__/numbers/numbers2.test.ts",
         "hints": [
-            "JavaScript has built in Math functions. Could you use one to square the number?"
+            "JavaScript tem funções Math integradas. Você poderia usar uma para elevar o número ao quadrado?"
         ]
     },
     {
@@ -40,8 +42,8 @@
         "path": "./exercises/conditions/conditions1.js",
         "testPath": "../__tests__/conditions/conditions1.test.ts",
         "hints": [
-            "Conditions are usually written as if/else statements",
-            "Make sure you what your return is in capital letters (see the toUpperCase method)"
+            "Condições são geralmente escritas como declarações if/else",
+            "Certifique-se de que seu retorno esteja em letras maiúsculas (veja o método toUpperCase)"
         ]
     },
     {
@@ -50,8 +52,8 @@
         "path": "./exercises/conditions/conditions2.js",
         "testPath": "../__tests__/conditions/conditions2.test.ts",
         "hints": [
-            "Use the ternary operator to shorten the lines of code in the previous condition exercise",
-            "Make sure you what your return is in capital letters (see the toUpperCase method)"
+            "Use o operador ternário para encurtar as linhas de código do exercício de condição anterior",
+            "Certifique-se de que seu retorno esteja em letras maiúsculas (veja o método toUpperCase)"
         ]
     },
     {
@@ -59,7 +61,7 @@
         "name": "variables1",
         "path": "./exercises/variables/variables1.js",
         "testPath": "../__tests__/variables/variables1.test.ts",
-        "hints": ["Can const variable be reassigned?"]
+        "hints": ["Variáveis const podem ser reatribuídas?"]
     },
     {
         "id": "c2a54842-b3fb-47bc-b3a0-adf86a681edb",
@@ -67,8 +69,8 @@
         "path": "./exercises/variables/variables2.js",
         "testPath": "../__tests__/variables/variables2.test.ts",
         "hints": [
-            "Make sure the variable is properly declared",
-            "is there any keywords we use to declare variable?"
+            "Certifique-se de que a variável está devidamente declarada",
+            "Existem palavras-chave que usamos para declarar variáveis?"
         ]
     }
 ]

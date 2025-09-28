@@ -41,7 +41,7 @@ const CompleteItems: React.FC<CompleteItemsInterface> = ({ ids, database }) => {
     return (
         <Box flexDirection="column" alignItems="flex-start" paddingRight={10}>
             <Text color="greenBright" underline={true}>
-                Completed Exercises {"✅"}
+                Exercícios Concluídos {"✅"}
             </Text>
             <Text>{"\n"}</Text>
             {ids.map((id, _) => {
@@ -76,7 +76,7 @@ const CurrentItem: React.FC<CurrentItemsInterface> = ({ userdata }) => {
                 alignItems="stretch"
                 paddingLeft={10}
                 paddingRight={10}>
-                <Text color="yellowBright">Hints {"❗❗"}</Text>
+                <Text color="yellowBright">Dicas {"❗❗"}</Text>
                 {hintsAlreadyShown.map((hint, idx) => (
                     <Text color="yellow" key={idx}>
                         {"🤔😲"} {hint}
@@ -89,11 +89,11 @@ const CurrentItem: React.FC<CurrentItemsInterface> = ({ userdata }) => {
     return (
         <Box flexDirection="column">
             <Text color="yellowBright" underline={true}>
-                Currently Solving{"⏱️"}
+                Resolvendo Atualmente{"⏱️"}
             </Text>
             <Text>{"\n"}</Text>
             <Text color="yellowBright" italic={true}>
-                Category :{" "}
+                Categoria :{" "}
                 {
                     userdata.current.info.testPath.split(path.sep)[
                     userdata.current.info.testPath.split(path.sep).length -
@@ -103,7 +103,7 @@ const CurrentItem: React.FC<CurrentItemsInterface> = ({ userdata }) => {
             </Text>
             <Text>{"\n"}</Text>
             <Text color="yellow">
-                Exercise Name : {userdata.current.info.name}
+                Nome do Exercício : {userdata.current.info.name}
             </Text>
             <Text>{"\n"}</Text>
             {hintsAlreadyShown.length > 0
@@ -135,7 +135,7 @@ const IncompleteItems: React.FC<IncompleteItemsInterface> = ({
             paddingLeft={10}
             alignSelf="center">
             <Text color="redBright" underline={true}>
-                Incomplete Exercises {"👀"}
+                Exercícios Incompletos {"👀"}
             </Text>
             <Text>{"\n"}</Text>
             {remainingExercises.map((exercise, idx) => {
@@ -165,7 +165,7 @@ const Presentation: React.FC<PresentationInterface> = ({
             "q",
             {
                 key: "q",
-                name: "quit",
+                name: "sair",
                 handler: async ({ userdata }) => {
                     writeFileToPath<UserData>(
                         userdata,
@@ -180,7 +180,7 @@ const Presentation: React.FC<PresentationInterface> = ({
             "c",
             {
                 key: "c",
-                name: "check code",
+                name: "verificar código",
                 handler: async ({ userdata, database }) => {
                     const codeEngine = new CodeEngine(userdata, database);
                     try {
@@ -201,7 +201,7 @@ const Presentation: React.FC<PresentationInterface> = ({
                     } catch (err: any) {
                         if (
                             err.message ===
-                            "Congratulations! You have completed jslings 🔥"
+                            "Parabéns! Você completou o jslings 🔥"
                         ) {
                             console.log(chalk.green(err.message));
                             setUserData({
@@ -222,7 +222,7 @@ const Presentation: React.FC<PresentationInterface> = ({
             "h",
             {
                 key: "h",
-                name: "show hint",
+                name: "mostrar dica",
                 handler: async ({ userdata }) => {
                     if (
                         userdata.current.currentHintIndex >=
@@ -230,7 +230,7 @@ const Presentation: React.FC<PresentationInterface> = ({
                     ) {
                         console.log(
                             chalk.red(
-                                "Sorry, we don't have any more hints for you.",
+                                "Desculpe, não temos mais dicas para você.",
                             ),
                         );
                     } else {
@@ -270,7 +270,7 @@ const Presentation: React.FC<PresentationInterface> = ({
                     </Box>
                 ) : (
                     <Text color="greenBright">
-                        Congratulations! You have completed jslings 🔥
+                        Parabéns! Você completou o jslings 🔥
                     </Text>
                 )}
             </Box>

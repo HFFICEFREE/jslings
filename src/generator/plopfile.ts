@@ -6,12 +6,12 @@ import { GeneratorData } from "../types/generator.types";
 
 module.exports = (plop: NodePlopAPI) => {
     plop.setGenerator("exercise", {
-        description: "generate a new exercise with tests",
+        description: "gerar um novo exercício com testes",
         prompts: [
             {
                 type: "list",
                 name: "concept",
-                message: "pick a JavaScript concept",
+                message: "escolha um conceito JavaScript",
                 choices: [
                     "strings",
                     "numbers",
@@ -23,7 +23,7 @@ module.exports = (plop: NodePlopAPI) => {
             {
                 type: "input",
                 name: "exercise",
-                message: "enter an exercise name (e.g. strings1)",
+                message: "digite um nome para o exercício (ex: strings1)",
             },
         ],
         actions: [
@@ -72,7 +72,7 @@ module.exports = (plop: NodePlopAPI) => {
                             concept,
                             `${exercise}.ts`,
                         ),
-                        hints: ["Add hints to help the user"],
+                        hints: ["Adicione dicas para ajudar o usuário"],
                     });
                     return JSON.stringify(exerciseCatalogue, null, 2);
                 },

@@ -1,13 +1,13 @@
 // strings2.js
-// Use the appropriate string property to get the length of the provided string
+// Use a propriedade de string apropriada para obter o comprimento da string fornecida
 
-// Press the key 'h' for hints!
+// Pressione a tecla 'h' para dicas!
 
-// DO NOT EDIT ABOVE THIS LINE
+// NÃO EDITE ACIMA DESTA LINHA
 
 const strlen = (text) => {
     return;
 };
 
-// DO NOT EDIT BELOW THIS LINE
+// NÃO EDITE ABAIXO DESTA LINHA
 module.exports = { strlen };

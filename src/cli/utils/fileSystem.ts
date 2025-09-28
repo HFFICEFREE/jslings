@@ -57,7 +57,7 @@ export const obtainStringifiedFileContents = (path: string): string => {
     try {
         return fs.readFileSync(path, "utf-8");
     } catch (_) {
-        throw new Error(`File not found at ${path}`);
+        throw new Error(`Arquivo não encontrado em ${path}`);
     }
 };
 
@@ -70,7 +70,7 @@ export const jsonParsedFileContents = <T>(stringifiedData: string): T => {
         return JSON.parse(stringifiedData) as T;
     } catch (_) {
         throw new Error(
-            `Stringified file could not be parsed in the provided type`,
+            `Arquivo stringificado não pôde ser analisado no tipo fornecido`,
         );
     }
 };
@@ -112,6 +112,6 @@ export const writeFileToPath = <T>(
         const filePath = path.join(folderpath, filename);
         fs.writeFileSync(filePath, JSON.stringify(data, null, 4), "utf-8");
     } catch (err) {
-        throw new Error(`Could not save to ${path.join(folderpath, filename)}`);
+        throw new Error(`Não foi possível salvar em ${path.join(folderpath, filename)}`);
     }
 };

@@ -1,15 +1,15 @@
 // numbers2.js
-// Make our `square` function to square a number.
+// Faça nossa função `square` elevar um número ao quadrado.
 
-// Press the key 'h' for hints!
+// Pressione a tecla 'h' para dicas!
 
-// DO NOT EDIT ABOVE THIS LINE
+// NÃO EDITE ACIMA DESTA LINHA
 
 const square = (a) => {
     return;
 };
 
-// DO NOT EDIT BELOW THIS LINE
+// NÃO EDITE ABAIXO DESTA LINHA
 
 module.exports = {
     square,

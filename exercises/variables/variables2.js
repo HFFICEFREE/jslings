@@ -1,13 +1,13 @@
 // variables2.js
 
-// Press the key 'h' for hints!
+// Pressione a tecla 'h' para dicas!
 
-// DO NOT EDIT ABOVE THIS LINE
+// NÃO EDITE ACIMA DESTA LINHA
 const variableDeclaration = (a) => {
     return;
 };
 
-// DO NOT EDIT BELOW THIS LINE
+// NÃO EDITE ABAIXO DESTA LINHA
 module.exports = {
     variableDeclaration,
 };

@@ -1,21 +1,21 @@
-// For a detailed explanation regarding each configuration property, visit:
+// Para uma explicação detalhada sobre cada propriedade de configuração, visite:
 // https://jestjs.io/docs/en/configuration.html
 
 export default {
-    // A preset that is used as a base for Jest's configuration
+    // Um preset que é usado como base para a configuração do Jest
     preset: "ts-jest",
-    // The test environment that will be used for testing
+    // O ambiente de teste que será usado para testes
     testEnvironment: "node",
 
-    // An array of glob patterns indicating a set of files for which coverage information should be collected
+    // Um array de padrões glob indicando um conjunto de arquivos para os quais informações de cobertura devem ser coletadas
     collectCoverageFrom: ["src/**/!(*.d).{js,jsx,ts,tsx}"],
-    // An array of regexp pattern strings used to skip coverage collection
+    // Um array de strings de padrão regexp usadas para pular a coleta de cobertura
     coveragePathIgnorePatterns: ["/node_modules/"],
 
-    // Only write lcov files in CIs
-    // A list of reporter names that Jest uses when writing coverage reports
+    // Escrever arquivos lcov apenas em CIs
+    // Uma lista de nomes de repórteres que o Jest usa ao escrever relatórios de cobertura
     coverageReporters: ["text"].concat(process.env.CI ? "json" : []),
-    // Use this configuration option to add custom reporters to Jest
+    // Use esta opção de configuração para adicionar repórteres personalizados ao Jest
     reporters: ["default"].concat(
         process.env.CI
             ? [
